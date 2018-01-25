@@ -62,7 +62,7 @@ public class TransparentWindowManager2 : MonoBehaviour
 
     protected virtual void Start()
     {
-        //#if !UNITY_EDITOR && UNITY_STANDALONE_WIN
+        #if !UNITY_EDITOR && UNITY_STANDALONE_WIN
         
         IntPtr windowHandle = GetActiveWindow();
     
@@ -83,7 +83,7 @@ public class TransparentWindowManager2 : MonoBehaviour
     
         Marshal.FreeHGlobal(accentPtr);
 
-        //#endif // !UNITY_EDITOR && UNITY_STANDALONE_WIN
+        #endif // !UNITY_EDITOR && UNITY_STANDALONE_WIN
     }
 
     #endregion Method
