@@ -4,7 +4,8 @@ using UnityEngine;
 
 // CAUTION:
 // This is experiment to use latest API.
-// Result of this script gets blurry transparent window.
+// Result of this script gets blurry transparent window
+// or something wrong window even if set any parameters.
 
 public class TransparentWindowManager2 : MonoBehaviour
 {
@@ -61,13 +62,14 @@ public class TransparentWindowManager2 : MonoBehaviour
 
     protected virtual void Start()
     {
-        #if !UNITY_EDITOR && UNITY_STANDALONE_WIN
+        //#if !UNITY_EDITOR && UNITY_STANDALONE_WIN
         
         IntPtr windowHandle = GetActiveWindow();
     
         var accent = new AccentPolicy();
         var accentStructSize = Marshal.SizeOf(accent);
         accent.AccentState = AccentState.ACCENT_ENABLE_BLURBEHIND;
+        accent.GradientColor = 0;
     
         var accentPtr = Marshal.AllocHGlobal(accentStructSize);
         Marshal.StructureToPtr(accent, accentPtr, false);
@@ -81,7 +83,7 @@ public class TransparentWindowManager2 : MonoBehaviour
     
         Marshal.FreeHGlobal(accentPtr);
 
-        #endif // !UNITY_EDITOR && UNITY_STANDALONE_WIN
+        //#endif // !UNITY_EDITOR && UNITY_STANDALONE_WIN
     }
 
     #endregion Method

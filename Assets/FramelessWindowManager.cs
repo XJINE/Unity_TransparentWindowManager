@@ -36,13 +36,13 @@ public class FramelessWindowManager : MonoBehaviour
 
         IntPtr windowHandle = GetActiveWindow();
         SetWindowLong(windowHandle, GWL_STYLE, WS_BORDER);
-        bool result = SetWindowPos(windowHandle,
-                                   0,
-                                   (int)windowRect.x,
-                                   (int)windowRect.y,
-                                   (int)windowRect.width,
-                                   (int)windowRect.height,
-                                   SWP_SHOWWINDOW);
+        SetWindowPos(windowHandle,
+                     0,
+                     (int)windowRect.x,
+                     (int)windowRect.y,
+                     (int)windowRect.width,
+                     (int)windowRect.height,
+                     SWP_SHOWWINDOW);
 
         #endif // !UNITY_EDITOR && UNITY_STANDALONE_WIN
     }
