@@ -35,7 +35,6 @@ Some anti-aliasing shader gets wrong result.
 
 ## Note
 
-Sometimes tearing occurs and I can't find the cause.
-However, this is not serious.
+Sometimes gets tearing and I can't find the cause. However, it is not serious.
 
 There is a little jaggy even if use anti-aliasing, especially in low-dpi.
