@@ -9,10 +9,9 @@ Make Unity's window transparent and overlay on desktop.
 This is for Windows, not works on Mac or any others.
 
 Transparency is ignored when use window mode in some laptop (especially when it use mobile type GPU).
+Need to use full-screen mode in such case.
 
-Need to use full-screen mode in such environment.
-
-In another way, use command-line option like followings
+In another way, use command-line option like a following
 and make the popup-window which has more over full-screen resolution.
 
 ```
