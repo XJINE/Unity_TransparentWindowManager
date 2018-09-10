@@ -1,8 +1,21 @@
-# Unity_TransparentWindow
+# Unity_TransparentWindowManager
 
 Make Unity's window transparent and overlay on desktop.
 
-![](https://github.com/XJINE/Unity_TransparentWindow/blob/master/screenshot.png)
+![](https://github.com/XJINE/Unity_TransparentWindowManager/blob/master/screenshot.png)
+
+## Import to Your Project
+
+You can import this asset from UnityPackage.
+
+- [XJDebug.unitypackage](https://github.com/XJINE/Unity_XJDebug/blob/master/TransparentWindowManager.unitypackage)
+
+## How to Use
+
+### Clear Color Settings
+
+To make transparent window, set ``Camera.ClearFlags`` to ``SolidColor``, and the ``Camera.Background`` to (0,0,0,0).
+When set Camera.Background to (1,1,1,0), the result gets wrong.
 
 ## Limitation
 
@@ -18,12 +31,7 @@ and make the popup-window which has more over full-screen resolution.
 -popupwindow -screen-width xxxx -screen-height xxxx
 ```
 
-## To Make Transparent Window
-
-To make transparent window, set Camera.ClearFlags to "SolidColor", and the Camera.Background to (0,0,0,0).
-When set Camera.Background to (1,1,1,0), the result gets wrong.
-
-## Anti-Aliasing
+### Anti-Aliasing
 
 Some anti-aliasing shader gets wrong result.
 

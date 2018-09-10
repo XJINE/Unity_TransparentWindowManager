@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using UnityEngine;
 
-public class TransparentWindowManager : MonoBehaviour
+public class TransparentWindowManager : SingletonMonoBehaviour<TransparentWindowManager>
 {
     #region Enum
 
@@ -64,7 +63,7 @@ public class TransparentWindowManager : MonoBehaviour
 
     #region Method
 
-    // NOTE:
+    // CAUTION:
     // To control enable or disable, use Start method instead of Awake.
 
     protected virtual void Start()
@@ -109,5 +108,4 @@ public class TransparentWindowManager : MonoBehaviour
     }
 
     #endregion Method
-
 }

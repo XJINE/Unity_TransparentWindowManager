@@ -2,8 +2,11 @@
 using System.Runtime.InteropServices;
 using System;
 
-public class FramelessWindowManager : MonoBehaviour
+public class FramelessWindowManager : SingletonMonoBehaviour<FramelessWindowManager>
 {
+    // NOTE:
+    // Unity has a command-line option "-popupwindow" to make the window frameless.
+
     #region DLL Import
 
     [DllImport("user32.dll")]
