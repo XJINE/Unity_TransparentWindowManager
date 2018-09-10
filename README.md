@@ -8,7 +8,7 @@ Make Unity's window transparent and overlay on desktop.
 
 You can import this asset from UnityPackage.
 
-- [XJDebug.unitypackage](https://github.com/XJINE/Unity_TransparentWindowManager/blob/master/TransparentWindowManager.unitypackage)
+- [TransparentWindowManager.unitypackage](https://github.com/XJINE/Unity_TransparentWindowManager/blob/master/TransparentWindowManager.unitypackage)
 
 ### Dependencies
 
@@ -21,7 +21,7 @@ You have to import following assets to use this asset.
 ### Clear Color Settings
 
 To make transparent window, set ``Camera.ClearFlags`` to ``SolidColor``, and the ``Camera.Background`` to (0,0,0,0).
-When set Camera.Background to (1,1,1,0), the result gets wrong.
+When set ``Camera.Background to (1,1,1,0)``, the result gets wrong.
 
 ## Limitation
 
